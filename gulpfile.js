@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     terser = require("gulp-terser"),
     rename = require("gulp-rename"),
+    babel = require("gulp-babel"),
     bsync = require('browser-sync'),
     eslint = require('gulp-eslint'),
     sass = require("gulp-sass"),
@@ -13,6 +14,7 @@ gulp.task('scripts', function(){
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(terser())
+    .pipe(babel())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
 });
