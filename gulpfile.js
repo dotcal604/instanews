@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     terser = require("gulp-terser"),
     rename = require("gulp-rename"),
+    bsync = require('browser-sync'),
     eslint = require('gulp-eslint'),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
@@ -33,4 +34,16 @@ gulp.task("styles", function() {
   });
 
 
-gulp.task('default', gulp.series('scripts', 'styles'));
+gulp.task('bwatch', function () {
+    bsync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp
+    .watch(["*.html", "js/*.js", "sass/*.scss"])
+    .on("change", bsync.reload);
+});
+
+gulp.task('default', gulp.series('scripts', 'styles', 'bwatch'));
