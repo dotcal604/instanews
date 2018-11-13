@@ -9,12 +9,3 @@
         @content;
     }
 }
-
-#parent {
-    .child {
-        display: none;
-    }
-    body {
-        color: black;
-    }
-}

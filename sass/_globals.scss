@@ -1,5 +1,6 @@
 body {
     background: black;
-    color: $footer-color;
-    font-family: "Open Sans";
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    color: $site-white;
 }
