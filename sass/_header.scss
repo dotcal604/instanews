@@ -1,0 +1,38 @@
+.page-header {
+    display: flex;
+    flex-direction: column;
+    color: $site-white;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+    img {
+        flex: 0;
+        padding: 30px;
+    }
+
+    p {
+        flex: 1;
+        margin: 10px;
+     } 
+    }
+
+
+
+    /*.page-header {
+    display: flex;
+    flex: 1;
+    color: $site-white;
+    text-align: center;
+    margin-top: 100px;
+    
+    img {
+        flex: 0;
+        padding: 30px;
+    }
+
+    p {
+        flex: 1;
+        margin: 10px;
+     } 
+    }*/
