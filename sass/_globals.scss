@@ -1,6 +1,12 @@
+@import 'mixins';
+
 body {
     background: black;
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $site-white;
+    @include flexCenter(center, center, column);
+    // this height is for applying flexbox
+    height: 90vh; 
 }
+
