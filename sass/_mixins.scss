@@ -9,3 +9,10 @@
         @content;
     }
 }
+
+@mixin flexCenter($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
