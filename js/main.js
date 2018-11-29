@@ -1,5 +1,7 @@
 "use strict";
 
+let x = 5;
+
 $(function() {
     
   $("#topics").change(function() {
